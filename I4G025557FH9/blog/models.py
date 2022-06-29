@@ -1,12 +1,10 @@
-
 from django.db import models
-
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 from django.urls import reverse
 from django.template.defaultfilters import slugify
-# Create your models here.
 
+# Create your models here.
 
 class BlogApp(models.Model):
 
@@ -44,5 +42,3 @@ class BlogApp(models.Model):
     
     def get_absolute_url(self):
         return reverse("blog:post_detail", kwargs={"slug": self.slug})
-
-
